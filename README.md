@@ -133,3 +133,6 @@ Google Maps API V3 を使用した地図の描画を手助けするプラグイ�
 
 +   `position` :
     `{address: "住所"}` or `{latitude: 緯度, longitude: 経度}`
+
+##注意点
+ジオコーディングによる緯度経度の取得は同時に10件までしか動作しないようです。（APIの仕様）
