@@ -1,35 +1,5 @@
 @charset "utf-8";
 
-/* SITE_NAME BASE.CSS （全ページ共通CSS）*/
-
-
-/*---------------------------------------
-*	
-*	00.GROBAL TAGS
-*
-*	MODULES
-*		MO_01.CLEARFIX
-*		MO_02.TEXT
-*		MO_03.LIST
-*
-*--------------------------------------*/
-
-
-
-/**--------------------------------------
-	00.GROBAL TAGS
----------------------------------------**/
-
-
-
-
-
-/*---------------------------------------
-
-	MODULES
-	
----------------------------------------**/
-
 
 /*---------------------------------------
 	MO_01.CLEARFIX
@@ -73,32 +43,44 @@
 }
 
 body {
-	line-height: 1.5;
+	line-height: 1.6em;
 	color: #333;
 	background-color: #fff;
 	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Mayryo","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-/*
-	font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","ＭＳ Ｐ明朝","MS PMincho",serif;
-*/
+	text-align: center;
 }
 
-/* for WinIE6*/
-* html body
-{
-	font-family: "ＭＳ Ｐゴシック","MS PGothic", sans-serif;
-/*
-	font-family: "ＭＳ Ｐ明朝","MS PMincho",serif;
-*/
+#container {
+	margin: 0 auto;
+	padding: 0 0 50px 0;
+	width: 960px;
+	text-align: left;
 }
 
-/* for WinIE7*/
-*:first-child+html body
-{
-	font-family: "ＭＳ Ｐゴシック","MS PGothic", sans-serif;
-/*
-	font-family: "ＭＳ Ｐ明朝","MS PMincho",serif;
-*/
+h1 {
+	margin: 10px 0 20px;
+	font-size: 122%;
+	font-weight: bold;
 }
+
+h2 {
+	margin: 0 0 5px;
+	font-size: 107%;
+}
+
+div#gMap {
+	margin-bottom: 40px;
+}
+
+div#gMap02 {
+	margin-bottom: 10px;
+}
+
+#mapController {
+	margin-bottom: 40px;
+}
+
+
 
 
 /*---------------------------------------

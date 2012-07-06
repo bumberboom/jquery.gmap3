@@ -3,7 +3,7 @@
  * Copyright (c) 2010-2012 bumberboom.net - info(at)bumberboom(dot)net | http://blog.bumberboom.net
  * 
  * Licensed under the MIT
- * Date: 2012/07/03
+ * Date: 2012/07/06
  * 
  * @author bumberboom.net
  * @version	0.4
@@ -53,7 +53,7 @@
 				if(status === google.maps.GeocoderStatus.OK) {
 					opt.center = results[0].geometry.location;
 				} else {
-					alert("『" + address + "』は見つかりませんでした。");
+					alert("『" + mpOpt.address + "』は見つかりませんでした。");
 				}
 				add();
 			});
@@ -93,14 +93,12 @@
 			geocoder.geocode({'address': mkOpt.address}, function(results, status) {
 				if(status === google.maps.GeocoderStatus.OK) {
 					opt.position = results[0].geometry.location;
-				}
-				else {
-					alert("『" + address + "』は見つかりませんでした。");
+				} else {
+					alert("『" + mkOpt.address + "』は見つかりませんでした。");
 				}
 				add();
 			});
-		}
-		else if(mkOpt.latitude && mkOpt.longitude) {
+		} else if(mkOpt.latitude && mkOpt.longitude) {
 			add();
 		}
 	}
@@ -132,7 +130,17 @@
 	};
 	
 	$.gmap3.panTo = function($gmap, pos) {
-		panTo($gmap, new google.maps.LatLng(pos.latitude, pos.longitude));
+		if(pos.address) {
+			geocoder.geocode({'address': pos.address}, function(results, status) {
+				if(status === google.maps.GeocoderStatus.OK) {
+					panTo($gmap, results[0].geometry.location);
+				} else {
+					alert("『" + pos.address + "』は見つかりませんでした。");
+				}
+			});
+		} else if(pos.latitude && pos.longitude) {
+			panTo($gmap, new google.maps.LatLng(pos.latitude, pos.longitude));
+		}
 	};
   
 	$.fn[name_space].defaults = {
@@ -145,6 +153,6 @@
 		scaleControl: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		markers: []
-    };
+  };
     
 })(jQuery);

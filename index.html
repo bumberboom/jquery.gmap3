@@ -18,13 +18,13 @@
 
 <style type="text/css">
 div#gMap {
-	margin-bottom: 20px;
-	width: 600px;
-	height: 600px;
+	margin-bottom: 40px;
+	width: 960px;
+	height: 380px;
 }
 div#gMap02 {
-	width: 600px;
-	height: 300px;
+	width: 960px;
+	height: 280px;
 }
 </style>
 
@@ -32,82 +32,177 @@ div#gMap02 {
 $(function() {
 
 	$("#gMap").gmap3({
-		latitude: 34.739574,
-		longitude: 135.347403,
-		zoom: 17,
+		address: '埼玉',
+		zoom: 8,
 		navigationControl: true,
 		mapTypeControl: true,
 		scaleControl: true,
 		markers: [
 			{
-				address: '西宮市西福町2-23',
-				title: 'さかねクリニック',
-				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>',
+				address: '東京',
+				title: '東京',
+				content: '<div class="infoWindowWrapper"><h4>東京</h4><p>東京都庁</p></div>',
 				openInfo: true
 			},
 			{
-				latitude: 34.739366,
-				longitude: 135.345397,
-				title: 'ダミー',
+				address: '栃木',
+				title: '栃木',
+				content: '<div class="infoWindowWrapper"><h4>栃木</h4><p>栃木県庁</p></div>'
+			},
+			{
+				address: '千葉',
+				title: '千葉',
 				icon: "images/pin_32.png",
-				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
+				content: '<div class="infoWindowWrapper"><h4>千葉</h4><p>千葉県庁</p></div>'
 			},
 			{
-				latitude: 34.739766,
-				longitude: 135.345897,
-				title: 'ダミー',
-				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
-			},
-			{
-				latitude: 34.739866,
-				longitude: 135.348397,
-				title: 'ダミー'
+				address: '山梨',
+				title: '山梨'
 			}
 		]
 	});
 
 	$("#gMap02").gmap3({
-		address: "岡本6-8-26",
-		zoom: 18,
+		latitude: 37.5,
+		longitude: 137.5,
+		zoom: 5,
 		navigationControl: true,
 		mapTypeControl: true,
 		scaleControl: true,
 		markers: [
 			{
-				address: '岡本6-8-26',
-				title: 'マイハウス',
-				content: '<div class="infoWindowWrapper"><h4>マイハウス</h4><p>〒658-0072<br />神戸市東灘区岡本6-8-26</p></div>',
-				openInfo: true
+				latitude: 43.0151348,
+				longitude: 141.4097381,
+				title: 'コンサドーレ札幌',
+				content: '<div class="infoWindowWrapper"><h4>コンサドーレ札幌</h4><p>札幌ドーム</p></div>'
 			},
 			{
-				address: '神戸大学',
-				title: 'ダミー',
-				icon: "images/pin_32.png",
-				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
+				latitude: 35.9917348,
+				longitude: 140.6405342,
+				title: '鹿島アントラーズ',
+				content: '<div class="infoWindowWrapper"><h4>鹿島アントラーズ</h4><p>県立カシマサッカースタジアム</p></div>'
+			},
+			{
+				latitude: 35.9030894,
+				longitude: 139.7175708,
+				title: '浦和レッズ',
+				content: '<div class="infoWindowWrapper"><h4>浦和レッズ</h4><p>埼玉スタジアム2002</p></div>'
+			},
+			{
+				latitude: 35.916158,
+				longitude: 139.6333813,
+				title: '大宮アルディージャ',
+				content: '<div class="infoWindowWrapper"><h4>大宮アルディージャ</h4><p>NACK5スタジアム大宮</p></div>'
+			},
+			{
+				latitude: 35.8484877,
+				longitude: 139.9751674,
+				title: '柏レイソル',
+				content: '<div class="infoWindowWrapper"><h4>柏レイソル</h4><p>日立柏サッカー場</p></div>'
+			},
+			{
+				latitude: 35.6641553,
+				longitude: 139.5270294,
+				title: 'FC東京',
+				content: '<div class="infoWindowWrapper"><h4>FC東京</h4><p>味の素スタジアム</p></div>'
+			},
+			{
+				latitude: 35.5855341,
+				longitude: 139.6526983,
+				title: '川崎フロンターレ',
+				content: '<div class="infoWindowWrapper"><h4>川崎フロンターレ</h4><p>等々力陸上競技場</p></div>'
+			},
+			{
+				latitude: 35.5099805,
+				longitude: 139.6064192,
+				title: '横浜Ｆ・マリノス',
+				content: '<div class="infoWindowWrapper"><h4>横浜Ｆ・マリノス</h4><p>日産スタジアム</p></div>'
+			},
+			{
+				latitude: 37.8826024,
+				longitude: 139.0592263,
+				title: 'アルビレックス新潟',
+				content: '<div class="infoWindowWrapper"><h4>アルビレックス新潟</h4><p>東北電力ビッグスワンスタジアム</p></div>'
+			},
+			{
+				latitude: 34.9847015,
+				longitude: 138.4813868,
+				title: '清水エスパルス',
+				content: '<div class="infoWindowWrapper"><h4>清水エスパルス</h4><p>アウトソーシングスタジアム日本平</p></div>'
+			},
+			{
+				latitude: 34.725217,
+				longitude: 137.875005,
+				title: 'ジュビロ磐田',
+				content: '<div class="infoWindowWrapper"><h4>ジュビロ磐田</h4><p>ヤマハスタジアム</p></div>'
+			},
+			{
+				latitude: 35.0847171,
+				longitude: 137.170825,
+				title: '名古屋グランパス',
+				content: '<div class="infoWindowWrapper"><h4>名古屋グランパス</h4><p>豊田スタジアム</p></div>'
+			},
+			{
+				latitude: 34.8103477,
+				longitude: 135.5427644,
+				title: 'ガンバ大阪',
+				content: '<div class="infoWindowWrapper"><h4>ガンバ大阪</h4><p>万博記念競技場</p></div>'
+			},
+			{
+				latitude: 34.612825,
+				longitude: 135.5164129,
+				title: 'セレッソ大阪',
+				content: '<div class="infoWindowWrapper"><h4>セレッソ大阪</h4><p>キンチョウスタジアム</p></div>'
+			},
+			{
+				latitude: 34.656708,
+				longitude: 135.1689639,
+				title: 'ヴィッセル神戸',
+				content: '<div class="infoWindowWrapper"><h4>ヴィッセル神戸</h4><p>ホームズスタジアム</p></div>'
+			},
+			{
+				latitude: 34.4399573,
+				longitude: 132.3948835,
+				title: 'サンフレッチェ広島',
+				content: '<div class="infoWindowWrapper"><h4>サンフレッチェ広島</h4><p>広島ビッグアーチ</p></div>'
+			},
+			{
+				latitude: 33.3716834,
+				longitude: 130.5202356,
+				title: 'サガン鳥栖',
+				content: '<div class="infoWindowWrapper"><h4>サガン鳥栖</h4><p>ベストアメニティスタジアム</p></div>'
 			}
 		]
 	});
 	
-	$('#gNav li.addMarker a').click(function() {
-		$.gmap3.addMarker($("#gMap"), {
-			latitude: 34.738574,
-			longitude: 135.347903,
-			title: 'さかねクリニック',
-			content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>',
-			openInfo: true
+	
+	//map controll
+	$('#addMarker').click(function() {
+		$.gmap3.addMarker($("#gMap02"), {
+			latitude: 38.3190954,
+			longitude: 140.8811375,
+			title: 'ベガルタ仙台',
+			content: '<div class="infoWindowWrapper"><h4>ベガルタ仙台</h4><p>ユアテックスタジアム仙台</p></div>'
 		});
 		return false;
 	});
 	
-	$('#gNav li.removeAllMarkers a').click(function() {
-		$.gmap3.removeAllMarkers($("#gMap"));
+	$('#removeAllMarkers').click(function() {
+		$.gmap3.removeAllMarkers($("#gMap02"));
 		return false;
 	});
 	
-	$('#gNav li.panTo a').click(function() {
-		$.gmap3.panTo($("#gMap"), {
-			latitude: 35,
-			longitude: 135
+	$('#panToEast').click(function() {
+		$.gmap3.panTo($("#gMap02"), {
+			latitude: 40,
+			longitude: 140,
+		});
+		return false;
+	});
+	
+	$('#panToWest').click(function() {
+		$.gmap3.panTo($("#gMap02"), {
+			address: '西脇市'
 		});
 		return false;
 	});
@@ -117,15 +212,20 @@ $(function() {
 </head>
 
 <body>
-
+<div id="container">
+	<h1>jquery.gmap3 デモ</h1>
+  
 	<div id="gMap"></div>
+  
+  <h2>ボタンによる操作付き</h2>
 	<div id="gMap02"></div>
 	
-	<ul id="gNav">
-		<li class="addMarker"><a href="#">addMarker</a></li>
-		<li class="removeAllMarkers"><a href="#">removeAllMarkers</a></li>
-		<li class="panTo"><a href="#">三宮</a></li>
-	</ul>
-
+  <p id="mapController">
+  	<input id="panToEast" type="button" value="地図の中心を移動（東日本）" />
+  	<input id="panToWest" type="button" value="地図の中心を移動（西日本）" />
+  	<input id="addMarker" type="button" value="マーカーを追加" />
+  	<input id="removeAllMarkers" type="button" value="全てのマーカーを削除" />
+  </p>
+</div>
 </body>
 </html>
