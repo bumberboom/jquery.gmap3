@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/* SITE_NAME BASE.CSS （全ページ共通CSS）*/
+
+
+/*---------------------------------------
+*	
+*	00.GROBAL TAGS
+*
+*	MODULES
+*		MO_01.CLEARFIX
+*		MO_02.TEXT
+*		MO_03.LIST
+*
+*--------------------------------------*/
+
+
+
+/**--------------------------------------
+	00.GROBAL TAGS
+---------------------------------------**/
+
+
+
+
+
+/*---------------------------------------
+
+	MODULES
+	
+---------------------------------------**/
+
+
+/*---------------------------------------
+	MO_01.CLEARFIX
+---------------------------------------**/
+
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfix{
+	display:inline-block;
+}
+
+/* \*/
+* html .clearfix{ 
+	height:1%;
+}
+/* */
+
+/*---------------------------------------
+	MO_02.TEXT
+	
+	Font-size Adjustment.
+	
+	77% = 10px	|	122% = 16px	|	167% = 22px	
+	85% = 11px	|	129% = 17px	|	174% = 23px 
+	92% = 12px	|	136% = 18px	|	182% = 24px 
+	100% = 13px	|	144% = 19px	|	189% = 25px 
+	107% = 14px	|	152% = 20px	|	197% = 26px 
+	114% = 15px	|	159% = 21px	| 
+---------------------------------------**/
+
+* {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	line-height: 1.5;
+	color: #333;
+	background-color: #fff;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Mayryo","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+/*
+	font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","ＭＳ Ｐ明朝","MS PMincho",serif;
+*/
+}
+
+/* for WinIE6*/
+* html body
+{
+	font-family: "ＭＳ Ｐゴシック","MS PGothic", sans-serif;
+/*
+	font-family: "ＭＳ Ｐ明朝","MS PMincho",serif;
+*/
+}
+
+/* for WinIE7*/
+*:first-child+html body
+{
+	font-family: "ＭＳ Ｐゴシック","MS PGothic", sans-serif;
+/*
+	font-family: "ＭＳ Ｐ明朝","MS PMincho",serif;
+*/
+}
+
+
+/*---------------------------------------
+	MO_03.LIST
+---------------------------------------**/
+
+ul,
+ol,
+dl
+{
+	list-style-position:outside;
+}

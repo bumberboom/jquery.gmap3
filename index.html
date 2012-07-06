@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<title></title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="css/import.css" media="all" /><!--CSS LINKAGE-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script><!--JS LINKAGE-->
+<script type="text/javascript" src="js/jquery.gmap3.js"></script><!--JS LINKAGE-->
+
+<style type="text/css">
+div#gMap {
+	margin-bottom: 20px;
+	width: 600px;
+	height: 600px;
+}
+div#gMap02 {
+	width: 600px;
+	height: 300px;
+}
+</style>
+
+<script type="text/javascript">
+$(function() {
+
+	$("#gMap").gmap3({
+		latitude: 34.739574,
+		longitude: 135.347403,
+		zoom: 17,
+		navigationControl: true,
+		mapTypeControl: true,
+		scaleControl: true,
+		markers: [
+			{
+				address: '西宮市西福町2-23',
+				title: 'さかねクリニック',
+				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>',
+				openInfo: true
+			},
+			{
+				latitude: 34.739366,
+				longitude: 135.345397,
+				title: 'ダミー',
+				icon: "images/pin_32.png",
+				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
+			},
+			{
+				latitude: 34.739766,
+				longitude: 135.345897,
+				title: 'ダミー',
+				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
+			},
+			{
+				latitude: 34.739866,
+				longitude: 135.348397,
+				title: 'ダミー'
+			}
+		]
+	});
+
+	$("#gMap02").gmap3({
+		address: "岡本6-8-26",
+		zoom: 18,
+		navigationControl: true,
+		mapTypeControl: true,
+		scaleControl: true,
+		markers: [
+			{
+				address: '岡本6-8-26',
+				title: 'マイハウス',
+				content: '<div class="infoWindowWrapper"><h4>マイハウス</h4><p>〒658-0072<br />神戸市東灘区岡本6-8-26</p></div>',
+				openInfo: true
+			},
+			{
+				address: '神戸大学',
+				title: 'ダミー',
+				icon: "images/pin_32.png",
+				content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>'
+			}
+		]
+	});
+	
+	$('#gNav li.addMarker a').click(function() {
+		$.gmap3.addMarker($("#gMap"), {
+			latitude: 34.738574,
+			longitude: 135.347903,
+			title: 'さかねクリニック',
+			content: '<div class="infoWindowWrapper"><h4>さかねクリニック</h4><p>〒662-0844<br />西宮市西福町2-23 イサダビル2F</p></div>',
+			openInfo: true
+		});
+		return false;
+	});
+	
+	$('#gNav li.removeAllMarkers a').click(function() {
+		$.gmap3.removeAllMarkers($("#gMap"));
+		return false;
+	});
+	
+	$('#gNav li.panTo a').click(function() {
+		$.gmap3.panTo($("#gMap"), {
+			latitude: 35,
+			longitude: 135
+		});
+		return false;
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+	<div id="gMap"></div>
+	<div id="gMap02"></div>
+	
+	<ul id="gNav">
+		<li class="addMarker"><a href="#">addMarker</a></li>
+		<li class="removeAllMarkers"><a href="#">removeAllMarkers</a></li>
+		<li class="panTo"><a href="#">三宮</a></li>
+	</ul>
+
+</body>
+</html>

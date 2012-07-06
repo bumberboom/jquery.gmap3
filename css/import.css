@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* SITE_NAME IMPORT.CSS （読み込み用CSS）*/
+
+@import "default.css";
+@import "base.css";
+
+
+//* IF NEED IE5 for MAC
+
+/*\*//*/
+@import "mac_ie5x.css";
+/**/
+
+//* IF NEED IE5 for WIN
+
+@media tty {
+i{content:"ﾃつ･";/*" "*/}} @import 'win_ie5x.css'; /*";}
+}/* */
